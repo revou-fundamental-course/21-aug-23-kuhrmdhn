@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <!-- LOGIN FORM -->
+    <div id="login-user">
+        <div class="login-container">
+            <div class="login-icon">
+                <h1>University</h1>
+                <img src="./src/assets/login/login-image.jpg" alt="Login Image">
+            </div>
+            <form class="login-form">
+                <div class="login-heading">
+                    <h1>Register</h1>
+                    <p><i>please register before you visit our website</i></p>
+                </div>
+                <div class="container">
+                    <label for="full-name">Your Full Name</label>
+                    <input name="full-name" type="text" placeholder="Your Name (ex. John Doe) OPTIONAL">
+                </div>
+                <div class="container">
+                    <label for="short-name">Your Short Name</label>
+                    <input id="user-short-name" name="short-name" type="text" placeholder="Your Short Name (ex. John) REQUIRED" required>
+                </div>
+                <div class="container">
+                    <button id="login-user-button" type="button">Visit Website!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- CONTENT -->
+    <main id="main-content">
+        <header class="navbar-container">
+            <div class="logo">
+                <h1>University</h1>
+            </div>
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="./src/about/about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="home">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="100%" height="600" preserveAspectRatio="none" viewBox="0 0 1440 700">
+                <g mask="url(&quot;#SvgjsMask1025&quot;)" fill="none">
+                    <rect width="1440" height="700" x="0" y="0" fill="rgba(12, 129, 149, 1)"></rect>
+                    <path d="M 0,648 C 288,578.6 1152,370.4 1440,301L1440 700L0 700z" fill="rgba(255, 255, 255, 1)"></path>
+                </g>
+                <defs>
+                    <mask id="SvgjsMask1025">
+                        <rect width="1440" height="700" fill="#ffffff"></rect>
+                    </mask>
+                </defs>
+            </svg>
+            <div class="content">
+                <div class="title">
+                    <h1>Hi <span id="username"></span>!</h1>
+                    <h1>Welcome to</h1>
+                    <h1>University</h1>
+                </div>
+                <div class="icon">
+                    <img src="./src/assets/icon-image.png" alt="Icon Image">
+                </div>
+            </div>
+        </section>
+        <section class="summary" id="profile">
+            <figure class="figure">
+                <img src="./src/assets/about-image.png" alt="Summary Icon">
+                <figcaption>
+                    <h1>Distinguished University Profile</h1>
+                    <p>A highly esteemed institution of higher education is located in a city steeped in history and natural beauty. This university excels in various fields of study and boasts a highly skilled and experienced faculty dedicated to advancing students' knowledge and critical thinking. With a highly collaborative and diverse learning environment, students have access to abundant research resources and can participate in a variety of extracurricular activities that enrich their experiences beyond the classroom. Additionally, the campus is also known for its modern facilities, including state-of-the-art libraries and adequate sports facilities. This institution is a respected place for those seeking quality higher education and limitless self-development opportunities.
+                    </p>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="facility-container">
+            <div class="heading">
+                <h1>Please Take a Look Our</h1>
+                <h1>School Facility Bellow</h1>
+            </div>
+            <div class="facility">
+                <figure class="card">
+                    <img src="./src/assets/facility/teacher.jpg"alt="">
+                    <figcaption>
+                        <p>Good Teacher Quality</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="./src/assets/facility/class.jpg"alt="">
+                    <figcaption>
+                        <p>Interactive Class</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="./src/assets/facility/computer.jpg"alt="">
+                    <figcaption>
+                        <p>Computer Room</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="./src/assets/facility/rest-room.jpg"alt="">
+                    <p>Clean Rest Room</p>
+                </figcaption>
+            </figure>
+            <figure class="card">
+                <img src="./src/assets/facility/science.jpg"alt="">
+                <figcaption>
+                    <figcaption>
+                        <p>Science Laboratory</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="./src/assets/facility/sports.jpg"alt="">
+                    <figcaption>
+                        <p>Sport Team</p>
+                    </figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="./src/assets/facility/washing-hand.jpg"alt="">
+                    <figcaption>
+                        <p>Washing Hand</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <svg class="contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f0f8ff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,229.3C384,224,480,160,576,122.7C672,85,768,75,864,85.3C960,96,1056,128,1152,128C1248,128,1344,96,1392,80L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+        <section id="contact">
+            <div class="contact-image">
+                <img src="./src/assets/contact-image.png" alt="Contact Image">
+            </div>
+            <form class="form">
+                <h1 class="form-title">Massage For Us</h1>
+                <input type="text" placeholder="Your Name" id="name-input">
+                <input type="date" name="birth" id="birth-input">
+                <div class="radio-input">
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label><br>
+                </div>
+                <textarea name="message" placeholder="Your Message " id="massage"></textarea>
+                <button type="button" id="send-button">Send</button>
+            </form>
+        </section>
+        <footer class="footer">
+            <div class="slogan">
+                <h1>Progress through</h1>
+                <h1>High-Quality Education Together</h1>
+            </div>
+            <div class="dev-info">
+                <img src="./src/assets/dev/develop.jpg" alt="Kukuh Ardi Ramadhan">
+                <div class="dev-contact">
+                    <a href="">LinkedIn</a>
+                    <a href="">Instagram</a>
+                    <a href="">Github</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- ALERT BOX -->
+    <div id="alert-box">
+        <div class="alert-container">
+            <div class="alert-wrapper">
+                <div class="heading">
+                    <h1>SUCCESS</h1>
+                    <p id="submit-time"></p>
+                </div>
+                <div class="alert-value">
+                    <p id="alert-username"></p>
+                    <p id="alert-birth"></p>
+                    <p id="alert-gender"></p>
+                    <p id="alert-massage"></p>
+                </div>
+                <div class="alert-button-container">
+                    <button id="alert-button"type="button">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./src/script.js"></script>
+</body>
+</html

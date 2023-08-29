@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University | About</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="navbar-container">
+        <div class="logo">
+            <h1>University</h1>
+        </div>
+        <nav class="navigation">
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#facility">Facility</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="profile">
+        <div class="profile-container">
+            <div class="heading">
+                <h1>University Profile</h1>
+            </div>
+            <div class="content-facility">
+                <article class="profile-article">
+                    <p>
+                        University is a renowned institution of higher learning, celebrated for its rich history, academic excellence, and commitment to fostering innovation and global citizenship. Founded in the late 19th century, it has since evolved into a world-class university with a diverse and vibrant community of scholars, students, and staff from across the globe.
+                        At University, our core mission is to provide a transformative education that prepares students to excel in an ever-changing world. Our dedicated faculty members are leaders in their respective fields, conducting groundbreaking research that advances knowledge and addresses pressing global challenges. Students benefit from this expertise through engaging classroom experiences, research opportunities, and mentorship that empower them to think critically and creatively. Beyond academics, University promotes a holistic approach to personal and professional development, offering a wide range of extracurricular activities, cultural events, and community engagement opportunities. We believe that fostering a well-rounded education is essential to nurturing future leaders who can navigate complex issues with empathy, ethics, and resilience.
+                    </p>
+                </article>
+                <aside class="aside-content">
+                    <figure class="founder-container">
+                        <img src="./assets/mr-john.jpg" alt="Mr. John">
+                        <figcaption>
+                            <h3>Mr. John</h3>
+                            <i>Founder</i>
+                        </figcaption>
+                    </figure>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <section id="facility">
+        <div class="facility-container">
+            <div class="heading">
+                <h1>Our Facility</h1>
+            </div>
+            <div class="facility-list">
+                <div class="card-container">
+                    <div class="card-facility">
+                        <img src="./assets/facility/classroom.jpg" alt="Classroom">
+                        <div class="desc">
+                            <p>Large, Clean, and Modern Classroom</p>
+                        </div>
+                    </div>
+                    <div class="card-facility">
+                        <img src="./assets/facility/computer-room.jpg" alt="Computer Room">
+                        <div class="desc">
+                            <p>Modern and High Technology Computer Room</p>
+                        </div>
+                    </div>
+                    <div class="card-facility">
+                        <img src="./assets/facility/laboratory.jpg" alt="Laboratory">
+                        <div class="desc">
+                            <p>Science Laboratory with High Quality Equipments</p>
+                        </div>
+                    </div>
+                    <div class="card-facility">
+                        <img src="./assets/facility/pool-area.jpg" alt="Pool Area">
+                        <div class="desc">
+                            <p>Clean Water Pool Area</p>
+                        </div>
+                    </div>
+                    <div class="card-facility">
+                        <img src="./assets/facility/pro-teacher.jpg" alt="Pro Teacher">
+                        <div class="desc">
+                            <p>Good Quality, Interactive, and Professional Teacher</p>
+                        </div>
+                    </div>
+                    <div class="card-facility">
+                        <img src="./assets/facility/sport-area.jpg" alt="Sport Area">
+                        <div class="desc">
+                            <p>Large Sport Area and Complete Facilities</p>
+                        </div>
+                    </div>
+                    <div class="card-facility">
+                        <img src="./assets/facility/washtafel.jpg" alt="Washtafel">
+                        <div class="desc">
+                            <p>Washtafel in every class</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const navbar = document.getElementsByClassName("navbar-container")[0]
+        const navbarText = document.querySelectorAll(".nav-list a");
+        const navbarLogo = document.querySelector(".logo h1")
+        window.addEventListener("scroll", () => {
+            if (scrollY > 100) {
+                navbar.style.backgroundColor = "#f0f8ff";
+                navbarText.forEach((text) => {
+                    text.style.color = "#0c8195";
+                    text.addEventListener("mouseover", () => {
+                        text.style.color = "#f1c111"
+                    })
+                    text.addEventListener("mouseout", () => {
+                        text.style.color = "#0c8195"
+                    })
+                })
+                navbarLogo.style.color = "#0c8195";
+            } else if(scrollY < 100) {
+                navbar.style.backgroundColor = "#0c8195";
+                navbarText.forEach((text) => {
+                    text.style.color = "#f0f8ff";
+                    text.addEventListener("mouseover", () => {
+                        text.style.color = "#f1c111"
+                    })
+                    text.addEventListener("mouseout", () => {
+                        text.style.color = "#f0f8ff"
+                    })
+                })
+                navbarLogo.style.color = "#f0f8ff";
+            }
+            navbar.style.transition = ".5s ease-in-out"
+        })
+
+    </script>
+</body>
+</html>
