@@ -13,6 +13,7 @@ html {
 }
 body{
     width: 100%;
+    background-color: #ffffff;
 }
 svg {
     width: 100%;
@@ -44,7 +45,6 @@ svg {
 .login-container {
     width: 100%;
     height: 100vh;
-    padding-left: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,6 +58,7 @@ svg {
     justify-content: center;
     align-items: center;
     gap: 100px;
+    margin-left: 120px;
 }
 .login-icon img {
     height: 350px;
@@ -66,7 +67,7 @@ svg {
 }
 .login-container .login-form {
     height: 100%;
-    width: 45%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,6 +86,9 @@ svg {
 .login-form .container {
     width: 70%;
     height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #f1c111;
 }
 .container input {
@@ -112,6 +116,72 @@ svg {
 }
 .container #login-user-button:active {
     background-color: #e4c454;
+}
+@media screen and (max-width: 975px) {
+    .login-container .login-icon {
+        margin-left: 0;
+        width: 50%;
+    }
+    .login-icon img {
+        height: 280px;
+        width: 380px;
+    }
+    .login-container .login-form {
+        width: 45%;
+    }
+    .login-form .login-heading h1 {
+        font-size: 1.6rem;
+    }
+    .login-form .login-heading p {
+        font-size: .8rem;
+    }
+    .login-form .container {
+        width: 80%;
+    }
+    .container label {
+        font-size: .8rem;
+    }
+    .container input {
+        font-size: .8rem;
+        height: 45px;
+    }
+    .container #login-user-button {
+        height: 45px;
+    }
+}
+@media screen and (max-width: 500px) {
+    #login-user .login-container {
+        flex-direction: column;
+    }
+    .login-container .login-icon {
+        width: 100%;
+        height: 60%;
+        gap: 50px;
+    }
+    .login-icon img {
+        height: 200px;
+        width: 300px;
+    }
+    .login-container .login-form {
+        width: 100%;
+    }
+    .login-form .login-heading {
+        margin-bottom: 30px;
+    }
+    .login-form .login-heading h1 {
+        font-size: 1.4rem;
+    }
+    .login-form .login-heading p {
+        font-size: .6rem;
+    }
+    .container input {
+        width: 70%;
+    }
+    .container #login-user-button {
+        width: 40%;
+        margin-left: 60px;
+        align-self: flex-start;
+    }
 }
 
 
@@ -195,9 +265,10 @@ svg {
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     position: relative;
-    top: -110%;
+    top: -100%;
 }
 .content .title {
     height: 100%;
@@ -233,79 +304,49 @@ svg {
         transform: translateY(0);
     }
 }
-@media screen and (max-width: 920px) {
-    .content .icon {
-        width: 400px;
+@media screen and (max-width: 900px) {
+    .content {
+        top: -125%;
     }
     .icon img {
-        height: 300px;
-        width: 400px;
+        height: 320px;
+        width: 420px;
     }
 }
-@media screen and (max-width: 668px) {
-    #home {
-        height: 50vh;
+@media screen and (max-width: 850px) {
+    .content {
+        top: -70%;
     }
-    #home svg {
-        width: 100%;
-        height: 100%;
-    }
+}
+@media screen and (max-width: 468px) {
     .content {
         justify-content: center;
-        align-items: center;
-        padding-right: 25px;
-    }
-    .content .title {
-        width: 50%;
-        height: 300px;
-    }
-    .title h1, .title span {
-        font-size: 1.5rem;
+        flex-direction: column-reverse;
+        top: -100%;
     }
     .content .icon {
-        width: 270px;
-        height: 170px;
+        width: 100vw;
+        align-items: flex-start;
+        height: min-content;
     }
     .icon img {
-        height: 200px;
-        width: 300px;
+        width: 290px;
+        height: 190px;
+    }
+    .content .title {
+        width: 100%;
+        padding: 20px;
     }
 }
-@media screen and (max-width: 480px) {
-    #home {
-        height: 60vh;
-        width: 100%;
-    }
-    #home svg {
-        height: 100%;
-        width: 100%;
-    }
+@media screen and (max-height :700px) {
     .content {
-        flex-direction: column;
-        padding-right: 0;
-    }
-    .content .title {
-        height: 150px;
-        width: 300px;
-        align-self: flex-start;
-    }
-    .content .icon {
-        align-self: flex-end;
-        width: fit-content;
-        margin-top: -35px;
-    }
-    .icon img {
-        width: 210px;
-        height: 250px;
+        top: -130%;
     }
 }
 
 
 .summary {
-    height: 75vh;
     width: 100%;
-    padding-top: 180px;
-    margin-top: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -332,10 +373,12 @@ svg {
     height: 250px;
     width: 500px;
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 850px) {
     .summary {
-        margin-top: 80px;
+        margin-top: -100px;
     }
+}
+@media screen and (max-width: 780px){
     .figure figcaption {
         width: 70%;
     }
@@ -361,6 +404,17 @@ svg {
     }
     .figure img {
         width: 90%;
+    }
+}
+@media screen and (max-height: 830px) {
+    .summary {
+        margin-top: 200px;
+
+    }
+}
+@media screen and (max-height: 700px) {
+    .summary {
+        margin-top: 300px;
     }
 }
 
@@ -428,6 +482,7 @@ svg {
 #contact {
     height: 60vh;
     width: 100%;
+    padding: 20px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -478,6 +533,11 @@ svg {
     border-radius: 10px;
     cursor: pointer;
     margin-top: 16px;
+}
+@media screen and (max-width:900px) {
+    .contact-svg {
+        margin-top: 0px;
+    }
 }
 @media screen and (max-width: 768px) {
     .contact-svg {
@@ -560,6 +620,26 @@ svg {
     color: #ffffff;
     text-decoration: underline;
 }
+@media screen and (max-width: 486px) {
+    .footer .slogan h1 {
+        font-size: 1rem;
+    }
+    .footer .slogan {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dev-info {
+        width: 40%;
+    }
+    .dev-info img {
+        height: 50px;
+        width: 50px;
+    }
+    .dev-info .dev-contact a {
+        font-size: .7rem;
+    }
+}
 
 
 #alert-box .alert-container {
@@ -570,7 +650,7 @@ svg {
     align-items: center;
 }
 #alert-box .alert-wrapper {
-    width: 35%;
+    width: max-content;
     height: max-content;
     padding: 25px;
     display: flex;
@@ -663,10 +743,10 @@ svg {
     .profile-container {
         justify-content: space-around;
     }
-    .content {
+    .content-facility {
         flex-direction: column-reverse;
     }
-    .content .profile-article {
+    .content-facility .profile-article {
         width: 100%;
     }
     .founder-container img {
@@ -681,10 +761,10 @@ svg {
     .profile-container {
         justify-content: space-around;
     }
-    .content {
+    .content-facility {
         justify-content: space-evenly;
     }
-    .content .profile-article {
+    .content-facility .profile-article {
         font-size: .9rem;
         margin-top: 25px;
     }
