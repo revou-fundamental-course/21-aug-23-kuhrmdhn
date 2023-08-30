@@ -37,6 +37,7 @@ loginUserButton.addEventListener("click", (e) => {
         loginUser.style.display = "none";
         alertBox.style.display = "none";
         setTimeout(() => {mainContent.style.display = "block"},700)
+        usernameWelcome.innerHTML = userShortName.value
     } else {
         alert("Please Check Your Input, Input Cannot Include Number");
     }
