@@ -178,7 +178,8 @@ svg {
         width: 70%;
     }
     .container #login-user-button {
-        width: 40%;
+        width: 45%;
+        height: 40px;
         margin-left: 60px;
         align-self: flex-start;
     }
@@ -252,6 +253,14 @@ svg {
     }
     .nav-list li a {
         font-size: 12px;
+    }
+}
+@media screen and (max-width: 465px) {
+    .navigation .nav-list {
+        width: 85%;
+    }
+    .nav-list li a {
+        font-size: 11px;
     }
 }
 
@@ -576,6 +585,9 @@ svg {
     #contact .form input, .form textarea{
         width: 100%;
     }
+    .form #send-button {
+        height: 40px;
+    }
 }
 
 
@@ -622,15 +634,16 @@ svg {
 }
 @media screen and (max-width: 486px) {
     .footer .slogan h1 {
-        font-size: 1rem;
+        font-size: .9rem;
     }
     .footer .slogan {
+        width: 40%;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
     .dev-info {
-        width: 40%;
+        width: 50%;
     }
     .dev-info img {
         height: 50px;
