@@ -2,6 +2,7 @@ const loginUser = document.getElementById('login-user');
 const userShortName = document.getElementById('user-short-name');
 const loginUserButton = document.getElementById('login-user-button');
 const mainContent = document.getElementById('main-content');
+const userFullName = document.getElementById('user-full-name');
 const usernameWelcome = document.getElementById('username');
 
 // Validate FUnction
@@ -16,19 +17,30 @@ function validateInput (inputValue) {
 
 
 // Login user
-loginUserButton.addEventListener("click", () => {
+const isLogin = localStorage.getItem("isLogin")
+const nameUser = localStorage.getItem("name")
+
+
+if(isLogin === "true") {
+    loginUser.style.display = "none";
+    mainContent.style.display = "block"
+}
+if(nameUser) {
+    usernameWelcome.innerHTML = localStorage.getItem("name")
+}
+
+loginUserButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.setItem("isLogin", "true");
+    localStorage.setItem("name", userShortName.value)
     if (validateInput(userShortName.value)) {
         loginUser.style.display = "none";
         alertBox.style.display = "none";
-        
-        setTimeout(() => mainContent.style.display = "block",500)
-
-        const userWelcome = userShortName.value;
-        usernameWelcome.innerHTML = userWelcome;
+        setTimeout(() => {mainContent.style.display = "block"},700)
     } else {
         alert("Please Check Your Input, Input Cannot Include Number");
     }
-});
+})
 
 
 // Scroll Navbar Event
@@ -37,7 +49,7 @@ const navbarText = document.querySelectorAll(".nav-list a");
 const navbarLogo = document.querySelector(".logo h1")
 window.addEventListener("scroll", () => {
     if (scrollY > 100) {
-        navbar.style.backgroundColor = "#f0f8ff";
+        navbar.style.background = "#f0f8ff";
         navbarText.forEach((text) => {
             text.style.color = "#0c8195";
             text.addEventListener("mouseover", () => {
@@ -49,7 +61,7 @@ window.addEventListener("scroll", () => {
         })
         navbarLogo.style.color = "#0c8195";
     } else if(scrollY < 100) {
-        navbar.style.backgroundColor = "#0c8195";
+        navbar.style.background = "#0c8195";
         navbarText.forEach((text) => {
             text.style.color = "#f0f8ff";
             text.addEventListener("mouseover", () => {
